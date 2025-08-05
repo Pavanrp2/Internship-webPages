@@ -1,0 +1,85 @@
+<div class="complete-page">
+
+    <div class="container">
+        <div class="content">
+    
+            <div class="hero-section">
+                <div class="section1 d-flex mb-5" >
+                    <div class="text">
+                        <p class="text-bold">Making Every <span>Event Memorable</span></p>
+                        <p class="description mt-3">Discover the platform that connects you with trusted vendors for every celebration.</p>
+                    </div>
+                    <div class="image">
+                        <img src="assets/about-page/aboutImage1.png" alt="Image">
+                    </div>
+                </div>
+    
+    
+                <div class="section2 d-flex gap-5">
+                    <div class="image2 ">
+                        <img class="" src="assets/about-page/aboutImage2.png" alt="Image">
+                    </div>
+                    <div class="text">
+                        <p class="header-text">About Eventographer</p>
+                        <p class="description mt-3">Eventographer is a smart platform designed to simplify event planning. We bring together photographers, videographers, decorators, and more — all in one place. Whether it's a grand wedding, a corporate gathering, or a cozy birthday party, we help you find the perfect vendor to match your vision and budget.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+            <!-- Middle section -->
+    <div class="middle-section">
+        <div class="text text-center">
+            <p class="header-text mb-3">What We Do</p>
+            <p class="description mb-5">By prioritizing trust, transparency, and technology, we strive to become the go-to platform where creativity meets customer care — redefining the way events are planned across the country.</p>
+        </div>
+                
+        <div class="cards d-flex text-center gap-5 mb-4">
+            <div class="card rounded p-3 shadow" *ngFor="let card of middle_section">
+                <div class="card-body">
+                    <img class="mb-4" [src]="card.img" [alt]="card.title">
+                    <p class="card-title mb-3">{{ card.title }}</p>
+                    <p class="card-text">{{ card.text }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+            <!-- last section -->
+    <div class="container">
+        <div class="content">
+    
+            <div class="last-section">
+                <div class="text text-center">
+                    <p class="header-text">How Eventographer Works ?</p>
+                    <p class="description mt-3 mb-5">Your perfect event is just four simple steps away. We've streamlined the process to make planning your special occasion effortless.</p>
+                </div>
+        
+                <div class="cards p-8">
+                    <div class="d-flex gap-4" *ngFor="let card of last_section">
+                        <div class="icon mt-4">
+                            <img class="mt-3" [src]="card.icon" alt="card.title">
+                        </div>
+                        <div class="card rounded p-1 mb-5 shadow">
+                            <div class="card-body">
+                                <p class="card-title">{{ card.title }}</p>
+                                <p class="card-text">{{ card.text }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="outer-container p-5 mb-3">
+        <p class="title">Ready to Plan Your Perfect Event?</p>
+        <p class="description mt-4">Join thousands of satisfied customers who have successfully planned memorable events with Eventographer.</p>
+        <button type="button" class="btn mt-4">Get Started Now</button>
+    </div>
+
+</div>

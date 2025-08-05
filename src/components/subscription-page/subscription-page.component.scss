@@ -1,0 +1,833 @@
+@import '../../styles/global.scss';
+.ctnr-flu{
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #E7E7E7;
+    .ctnr{
+        .main-content{
+            .header{
+                p.text{
+                    color: #FF6464;
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+                p.description{
+                    font-size: 1.25rem;
+                    font-weight: 500;
+                    color: #9A9A9A;
+                }
+            }
+            .current-plan{
+                background-color: #F6F6F6;
+                border-radius: 0.5rem;
+                .section1{
+                    padding: 2rem;
+                    p.text{
+                        font-size: 1.7rem;
+                        font-weight: 700;
+                        color: #13274E;
+                    }
+
+                    p.description{
+                        font-size: 1rem;
+                        font-weight: 500;
+                        color: #9A9A9A;
+                    }
+                }
+                .planDetails{
+                    .plan-details{
+                        width: 70%;
+                        height: 80%;
+                        p.card-title{
+                            font-size: 1.9rem;
+                            font-weight: 700;
+                            color: #13274E;
+                            margin-bottom: 1rem;
+                            img{
+                                width: 50px;
+                                margin-right: 1rem;
+                            }
+                        }
+                        p.key{
+                            font-size: 1rem;
+                            font-weight: 500;
+                            color: #9A9A9A;
+                            margin-bottom: 1.5rem;
+                            strong{
+                                color: #000000;
+                            }
+                        }
+                    }
+                }
+            }
+            .plans{
+                .standard{
+                    flex-direction: row;
+                    gap: 5rem;
+                    border-radius: 8px;
+                    padding: 1.5rem 3rem;
+                    background-color: #FFFFFF;
+                    border: 5px solid transparent; 
+                    transition: border 0.3s ease;
+                    height: 360px;
+                    .details{
+                        .features-scroll {
+                            overflow-y: auto;
+                            &::-webkit-scrollbar {
+                              display: none;
+                            }
+                            scrollbar-width: none;
+                            -ms-overflow-style: none;
+                          }
+                        p.card-title{
+                            font-size: 2rem;
+                            font-weight: 600;
+                            border-radius: 13px;
+                            padding: 0.5rem;
+                            margin-bottom: 1rem;
+                        }
+                        p.card-texts{
+                            font-size: 1rem;
+                            font-weight: 400;
+                            i{
+                                color: #2DC937;
+                                margin-right: 1.5rem;
+
+                            }
+                        }
+                    }
+                    .price-details{
+                        p.price{
+                            font-size: 3.75rem;
+                            font-weight: 600;
+                        }
+                        p.duration{
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                        }
+                        .button{
+                            button{
+                                padding: 0.5rem;
+                                font-size: 1.25rem;
+                                font-weight: 500;
+                                color: #FFFFFF;
+                                background-color: #000000;
+                                border-radius: 10px;
+                                &:hover{
+                                    color: #000000;
+                                    background-color: #FFFFFF;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        border: 5px solid #FF6464;
+                    }
+                }
+                .premium{
+                    flex-direction: row;
+                    gap: 5rem;
+                    background-color: #13274E;
+                    border-radius: 8px;
+                    color: #FFFFFF;
+                    padding:1.5rem 3rem;
+                    border: 5px solid transparent; 
+                    transition: border 0.3s ease;
+                    height: 360px;
+                    .details{
+                        .features-scroll {
+                            overflow-y: auto;
+                            &::-webkit-scrollbar {
+                              display: none;
+                            }
+                            scrollbar-width: none;
+                            -ms-overflow-style: none;
+                          }
+                        p.card-title{
+                            font-size: 2rem;
+                            font-weight: 600;
+                            border-radius: 13px;
+                            padding: 0.5rem;
+                            margin-bottom: 1rem;
+                        }
+                        p.card-texts{
+                            font-size: 1rem;
+                            font-weight: 400;
+                            i{
+                                color: #2DC937;
+                                margin-right: 1.5rem;
+
+                            }
+                        }
+                    }
+                    .price-details{
+                        p.price{
+                            font-size: 3.75rem;
+                            font-weight: 600;
+                        }
+                        p.duration{
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                        }
+                        .button{
+                            button{
+                                padding: 0.5rem;
+                                font-size: 1.25rem;
+                                font-weight: 500;
+                                background-color: #FFFFFF;
+                                color: #000000;
+                                border-radius: 10px;
+                                &:hover{
+                                    color: #FFFFFF;
+                                    background-color: #13274E;
+                                    border:2px solid #FFFFFF;
+                                }
+                            }
+                        }
+                    }
+                    &:hover{
+                        border: 5px solid #FF6464;
+                    }
+                }
+            }
+            .termsAndCondtion{
+                p{
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@include xs{
+    .ctnr-flu{
+        background-color: #FFFFFF;
+        .ctnr{
+            .main-content{
+                .header{
+                    p.text{
+                        font-size: 1.5rem;   
+                    }
+                    p.description{
+                        font-size: 1rem;
+                        font-weight: 400;  
+                    }
+                }
+                .current-plan{
+                    display: flex;
+                    flex-direction: column;
+                    .section1{
+                        p.text{
+                            font-size: 1.1rem;
+                            font-weight: 600;    
+                        }
+                        p.description{
+                            font-size: 0.9rem;
+                            font-weight: 400;  
+                        }
+                    }
+                    .planDetails{
+                        margin-bottom: 2rem;
+                        .plan-details{
+                            padding: 0.5rem;
+                            min-width: 16rem;
+                            p.card-title{
+                                font-size: 1.25rem;
+                                font-weight: 700; 
+                                img{
+                                    width: 30px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .plans{
+                    flex-direction: column;
+                    align-items: center;
+
+                    .standard{
+                        flex-direction: column;
+                        padding: 2rem;
+                        border: 3px solid #13274E;
+                        border-radius: 6px;
+                        min-width: 16rem;
+                        gap: 1rem;
+                        height: 500px;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        .details{
+                            .features-scroll {
+                                overflow-y: auto;
+                                &::-webkit-scrollbar {
+                                  display: none;
+                                }
+                                scrollbar-width: none;
+                                -ms-overflow-style: none;
+                              }
+                            p.card-title{
+                                font-size: 1.75rem;
+                            }
+                            p.card-texts{
+                                font-size: 0.8rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                            .overflow-auto{
+                                max-height: 12rem;
+                            }
+                        }
+                        .price-details{
+                            margin-top: auto;
+                            p.price{
+                                font-size: 1.8rem; 
+                            }
+                            p.duration{
+                                font-size: 0.75rem;
+                            }
+                            .button{
+                                button{
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+                    }
+                    .premium{
+                        flex-direction: column;
+                        margin-bottom: 2rem;
+                        min-width: 16rem;
+                        padding:1rem;
+                        gap: 1rem;
+                        height: 500px;
+                        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                        .details{
+                            .features-scroll {
+                                overflow-y: auto;
+                                &::-webkit-scrollbar {
+                                  display: none;
+                                }
+                                scrollbar-width: none;
+                                -ms-overflow-style: none;
+                              }
+                            p.card-title{
+                                font-size: 1.75rem;
+                            }
+                            p.card-texts{
+                                font-size: 0.8rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                            .overflow-auto{
+                                max-height: 12rem;
+                            }
+                        }
+                        .price-details{
+                            margin-top: auto;
+                            p.price{
+                                font-size: 1.8rem;
+                            }
+                            p.duration{
+                                font-size: 0.75rem; 
+                            }
+                            .button{
+                                button{
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .termsAndCondtion{
+                    p{
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include sm{
+    .ctnr-flu{
+        background-color: #FFFFFF;
+        .ctnr{
+            width: 100%;
+            max-width: 100%;
+            .main-content{
+                .header{
+                    p.text{
+                        font-size: 1.5rem; 
+                    }
+                    p.description{
+                        font-size: 1rem;
+                        font-weight: 400;  
+                    }
+                }
+                .current-plan{
+                    flex-direction: column;
+                    .section1{
+                        p.text{
+                            font-size: 1.1rem;
+                            font-weight: 600;    
+                        }
+                        p.description{
+                            font-size: 0.9rem;
+                            font-weight: 400;  
+                        }
+                    }
+                    .planDetails{
+                        margin-bottom: 2rem;
+                        min-width: 50%;
+                        .plan-details{
+                            padding: 0.5rem;
+                            width: 50%;
+                            min-width: 23rem;
+                            p.card-title{
+                                font-size: 1.25rem;
+                                font-weight: 700;
+                                img{
+                                    width: 35px;
+                                } 
+                            }
+                            p.key{
+                                font-size: 1rem;
+                                font-weight: 500; 
+                            }
+                        }
+                    }
+                }
+                .plans{
+                    gap: 2rem;
+                    .standard{
+                        flex-direction: column;
+                        border: 3px solid #13274E !important;
+                        border-radius: 6px;
+                        padding: 2rem;
+                        gap: 1rem;
+                        width: 100%;
+                        height: 500px;
+                        .details{
+                            p.card-title{
+                                font-size: 1.75rem;
+                            }
+                            p.card-texts{
+                                font-size: 0.8rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                } 
+                            }
+                            .overflow-auto{
+                                max-height: 12rem;
+                            }
+                        }
+                        .price-details{
+                            margin-top: auto;
+                            p.price{
+                                font-size: 1.8rem; 
+                            }
+                            p.duration{
+                                font-size: 0.75rem;
+                            }
+                            .button{
+                                button{
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+                    }
+                    .premium{
+                        flex-direction: column;
+                        padding:2rem;
+                        gap: 1rem;
+                        width: 100%;
+                        height: 500px;
+                        .details{
+                            p.card-title{
+                                font-size: 1.75rem;
+                            }
+                            p.card-texts{
+                                font-size: 0.8rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                            .overflow-auto{
+                                max-height: 12rem;
+                            }
+                        }
+                        .price-details{
+                            margin-top: auto;
+                            p.price{
+                                font-size: 1.8rem;
+                            }
+                            p.duration{
+                                font-size: 0.75rem; 
+                            }
+                            .button{
+                                button{
+                                    font-size: 0.75rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .termsAndCondtion{
+                    p{
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        };
+    }
+}
+
+@include md{
+    .ctnr-flu{
+        .ctnr{
+            .main-content{
+                .header{
+                    p.text{
+                        font-size: 1.5rem;   
+                    }
+                    p.description{
+                        font-size: 1rem;
+                        font-weight: 400;  
+                    }
+                }
+                .current-plan{
+                    .section1{
+                        p.text{
+                            font-size: 1rem;
+                            font-weight: 600;    
+                        }
+                        p.description{
+                            font-size: 0.8rem;
+                            font-weight: 400;  
+                        }
+                    }
+                    .planDetails{
+                        .plan-details{
+                            padding: 2rem;
+                            p.card-title{
+                                font-size: 1rem;
+                                font-weight: 700; 
+                            }
+                            p.key{
+                                font-size: 0.8rem;
+                                font-weight: 500; 
+                            }
+                        }
+                    }
+                }
+                .plans{
+                    gap: 1rem;
+                    .standard{
+                        border-radius: 6px;
+                        gap: 2rem;
+                        height: 300px;
+                        .details{
+                            p.card-title{
+                                font-size: 1.2rem;
+                            }
+                            p.card-texts{
+                                font-size: 0.6rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                } 
+                            }
+                            .overflow-auto{
+                                max-height: 11rem;
+                            }
+                        }
+                        .price-details{
+                            p.price{
+                                font-size: 1.2rem;
+                            }
+                            p.duration{
+                                font-size: 0.6rem;
+                            }
+                            .button{
+                                button{
+                                    font-size: 0.6rem;
+                                }
+                            }
+                        }
+                    }
+                    .premium{
+                        border-radius: 6px;
+                        gap: 2rem;
+                        height: 300px;
+                        .details{
+                            p.card-title{
+                                font-size: 1.2rem;
+                            }
+                            p.card-texts{
+                                font-size: 0.6rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                }
+                            }
+                            .overflow-auto{
+                                max-height: 11rem;
+                            }
+                        }
+                        .price-details{
+                            p.price{
+                                font-size: 1.2rem;
+                            }
+                            p.duration{
+                                font-size: 0.6rem;
+                            }
+                            .button{
+                                button{
+                                    font-size: 0.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .termsAndCondtion{
+                    p{
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include lg{
+    .ctnr-flu{
+        .ctnr{
+            .main-content{
+                .header{
+                    p.text{
+                        font-size: 1.8rem;    
+                    }
+                    p.description{
+                        font-size: 1.2rem;
+                        font-weight: 400;  
+                    }
+                }
+                .current-plan{
+                    .section1{
+                        p.text{
+                            font-size: 1.2rem;
+                            font-weight: 600;    
+                        }
+                        p.description{
+                            font-size: 1rem;
+                            font-weight: 400;  
+                        }
+                    }
+                    .planDetails{
+                        .plan-details{
+                            padding: 2rem;
+                            p.card-title{
+                                font-size: 1.2rem;
+                                font-weight: 700; 
+                            }
+                            p.key{
+                                font-size: 1rem;
+                                font-weight: 500; 
+                            }
+                        }
+                    }
+                }
+                .plans{
+                    .standard{
+                        border-radius: 6px;
+                        gap: 2rem;
+                        height: 300px;
+                        .details{
+                            p.card-title{
+                                font-size: 1.5rem;
+                            }
+                            p.card-texts{
+                                font-size: 0.9rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                } 
+                            }
+                            .overflow-auto{
+                                max-height: 11rem;
+                            }
+                        }
+                        .price-details{
+                            p.price{
+                                font-size: 1.8rem; 
+                            }
+                            p.duration{
+                                font-size: 1rem;
+                                font-weight: 600; 
+                            }
+                            .button{
+                                button{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                    .premium{
+                        border-radius: 6px;
+                        gap: 2rem;
+                        height: 300px;
+                        .details{
+                            p.card-title{
+                                font-size: 1.5rem;
+                            }
+                            p.card-texts{
+                                font-size: 0.9rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                } 
+                            }
+                            .overflow-auto{
+                                max-height: 11rem;
+                            }
+                        }
+                        .price-details{
+                            p.price{
+                                font-size: 1.8rem; 
+                            }
+                            p.duration{
+                                font-size: 1rem; 
+                            }
+                            .button{
+                                button{
+                                    font-size: 1rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .termsAndCondtion{
+                    p{
+                        font-size: 1rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include xl{
+    .ctnr-flu{
+        .ctnr{
+            .main-content{
+                .header{
+                    p.text{
+                        font-size: 2rem;
+                        font-weight: 600;    
+                    }
+                    p.description{
+                        font-size: 1.2rem;
+                        font-weight: 400;  
+                    }
+                }
+                .current-plan{
+                    .section1{
+                        p.text{
+                            font-size: 1.5rem;
+                            font-weight: 600;    
+                        }
+                        p.description{
+                            font-size: 1.2rem;
+                            font-weight: 400;  
+                        }
+                    }
+                    .planDetails{
+                        .plan-details{
+                            padding: 2rem;
+                            p.card-title{
+                                font-size: 1.5rem;
+                                font-weight: 700; 
+                            }
+                            p.key{
+                                font-size: 1.2rem;
+                                font-weight: 500; 
+                            }
+                        }
+                    }
+                }
+                .plans{
+                    gap: 3rem;
+                    .standard{
+                        border-radius: 6px;
+                        gap: 5rem;
+                        
+                        .details{
+                            p.card-title{
+                                font-size: 1.8rem;
+                            }
+                            p.card-texts{
+                                font-size: 1.1rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                } 
+                            }
+                            .overflow-auto{
+                                max-height: 12rem;
+                            }
+                        }
+                        .price-details{
+                            p.price{
+                                font-size:2rem; 
+                            }
+                            p.duration{
+                                font-size: 1.2rem;
+                            }
+                            .button{
+                                button{
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                    .premium{
+                        border-radius: 6px;
+                        gap: 3rem;
+                        .details{
+                            p.card-title{
+                                font-size: 1.8rem;
+                            }
+                            p.card-texts{
+                                font-size: 1.1rem;
+                                i{
+                                    margin-right: 0.5rem;
+                                } 
+                            }
+                            .overflow-auto{
+                                max-height: 12rem;
+                            }
+                        }
+                        .price-details{
+                            p.price{
+                                font-size: 2rem; 
+                            }
+                            p.duration{
+                                font-size: 1.4rem;
+                            }
+                            .button{
+                                button{
+                                    font-size: 1.4rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                .termsAndCondtion{
+                    p{
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}

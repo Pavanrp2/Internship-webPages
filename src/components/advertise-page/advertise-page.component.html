@@ -1,0 +1,84 @@
+<div class="container">
+    
+    <div class="content">
+
+        <div class="content-main">
+            <div class="display-6 content-header">
+                <p><i class="bi bi-arrow-left"></i>Advertisement</p>
+            </div>
+
+            <div class="content-description">
+                <div class="icon">
+                    <img src="assets/form-svgrepo-com.svg" alt="">
+                </div>
+                <div class="sub-header">
+                    <p class="mb-2 sh1">Submit Your Advertisement Request</p>
+                    <p class="sh2">
+                        Promote your event, service, and more - fill out the form and get featured on our platform.
+                    </p>
+                </div>
+            </div>
+
+            <div class="divider">
+                <hr>
+            </div>
+        </div>
+
+        <div class="content-form">
+            <form #adForm="ngForm" (ngSubmit)="onSubmit(adForm)" >
+                <div class="mb-4">
+                    <label for="" class="form-label">User Name:</label>
+                    <input type="text" class="form-control" [(ngModel)]="formData.user_name" name="user_name" id="" required #user_name="ngModel">
+                    <div class="text-danger" *ngIf="user_name.touched && user_name.invalid">
+                        *This field is required
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="" class="form-label">User Email Address:</label>
+                    <input type="email" class="form-control" id="" [(ngModel)]="formData.user_email" name="user_email" #user_email="ngModel" required>
+                    <div class="text-danger" *ngIf="user_email.touched && user_email.invalid">
+                        *This field is required
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="" class="form-label">Date:</label>
+                    <input type="date" class="form-control" id="" [(ngModel)]="formData.date" name="date" #date="ngModel" required>
+                    <div class="text-danger" *ngIf="date.touched && date.invalid">
+                        *This field is required
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="" class="form-label">Subject:</label>
+                    <input type="text" class="form-control" id="" [(ngModel)]="formData.subject" name="subject" #subject="ngModel" required>
+                    <div class="text-danger" *ngIf="subject.touched && subject.invalid">
+                        *This field is required
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="" class="form-label">Description</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="formData.description" name="description" #description="ngModel" required></textarea>
+                    <div class="text-danger" *ngIf="description.touched && description.invalid">
+                        *This field is required
+                    </div>
+                </div>
+
+                <div class="btn-container" >
+                    <button class="btn custom-btn">Submit</button>
+                </div>
+
+            </form>
+            <div class="image">
+                <img src="assets/Advertisement-image.svg" alt="Ad image">
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+
+  

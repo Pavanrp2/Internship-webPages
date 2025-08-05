@@ -1,0 +1,50 @@
+/* You can add global styles to this file, and also import other style files */
+$grid-breakpoints: (
+  xs: 0,
+  //mobile
+  sm: 576px,
+  //tab mini
+  md: 768px,
+  //tab
+  lg: 992px,
+  //standard screen
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+/* Bootstrap-based media mixins */
+@mixin xs {
+  @media (max-width: #{map-get($grid-breakpoints, sm) - 1}) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: #{map-get($grid-breakpoints, sm)}) and (max-width: #{map-get($grid-breakpoints, md) - 1}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{map-get($grid-breakpoints, md)}) and (max-width: #{map-get($grid-breakpoints, lg) - 1}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) and (max-width: #{map-get($grid-breakpoints, xl) - 1}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{map-get($grid-breakpoints, xl)}) and (max-width: #{map-get($grid-breakpoints, xxl) - 1}) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: #{map-get($grid-breakpoints, xxl)}) {
+    @content;
+  }
+}

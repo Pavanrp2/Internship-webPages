@@ -1,0 +1,54 @@
+<div class="container">
+
+    <div class="content">
+        <div class="content-header">
+            <i class="bi bi-arrow-left"></i>
+            <p>Preferences</p>
+        </div>
+        <hr>
+
+        <div class="content-main my-4 card-1">
+
+            <div class="card mb-4 card-2" *ngFor="let category of categories">
+                <h5 class="mb-4 card-title">{{ category.name }}</h5>
+
+                <ng-container *ngIf="category.name === 'Language & Region'; else checkbox">
+                    <div class="selector">
+                        <p class="text-muted mb-1">Preferred Language</p>
+                        <select class="form-select mb-3 text-muted">
+                            <option *ngFor="let option of category.options" [value]="option.id" >{{ option.name }}</option>
+                        </select>
+    
+                        <p class="text-muted mb-1">Time Zone/Region</p>
+                        <select class="form-select text-muted" >
+                            <option *ngFor="let option of category.options" [value]="option.id">{{ option.name}}</option>
+                        </select>
+                    </div>
+                </ng-container>
+
+
+                <ng-template #checkbox>
+                    <div class="mb-4 d-flex" *ngFor="let option of category.options">
+    
+                        <div class="checkbox">
+                            <input type="checkbox" [checked]="option.is_locked ? true : getOptionValue(option.id)" (change)="onToggle(option.id)" [disabled]="option.is_locked">
+                        </div>
+                        <div class="card-menu">
+                            <p class="menu-title">{{ option.name }}</p>
+                            <p class="mb-0 menu-subtitle">{{ option.description }}</p>
+                        </div>
+                    </div>
+                </ng-template>
+
+            </div> 
+        </div>
+
+    <div class="cookies">
+        <div class="cookies-inner">
+            
+            <p><i class="bi bi-cookie"></i> &nbsp;We use cookies to enhance your experience. By continuing to visiting this site agree to use of our cookies</p>
+            <button type="button" class="btn btn-outline-light">Accept Managed Settings</button>
+            <button class="btn btn-primary" type="button">Accept all</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+<div class="container-fluid ctnr-flu">
+    <div class="container ctnr">
+
+        <div class="main-content">
+            <div class="header">
+                <p class="text">Choose a Plan</p>
+                <p class="description">Unlock your business potential—choose a plan that powers your growth.</p>
+            </div>
+            <div class="current-plan d-flex row">
+                <div class="section1 text-center col-md-6">
+                    <p class="text">You're a Premium Vendor</p>
+                    <div class="image text-center d-flex justify-content-center">
+                        <img class="d-flex justify-content-center align-items-center" src="assets/subscription/congratulations.png" alt="Image">
+                    </div>
+                    <p class="description">Unlock all the power of this Business potentials and enjoy digital experience like never before! </p>
+                </div>
+                <div class="planDetails col-md-6 d-flex align-items-center justify-content-center">
+                    <div class="plan-details card shadow-lg text-center justify-content-center rounded-4 border-0">
+                        <p class="card-title d-flex align-items-center justify-content-center"><img src="assets/subscription/group.svg" alt=""> Plan Details</p>
+                        <p class="key gap-3">Plan Type:&nbsp;<strong class="value">&nbsp;{{ currentPlan.type}}</strong></p>
+                        <p class="key">Expires in:&nbsp;<strong class="value">&nbsp;{{ currentPlan.expiresIn}}</strong></p>
+                        <p class="key">Valid Till:&nbsp;<strong class="value">&nbsp;{{ currentPlan.validTill }}</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plans d-flex justify-content-between mt-4">
+                <div class="premium card d-flex" *ngFor="let plan of premiumPlans">
+                    <div class="details d-flex  flex-column">
+                        <p class="card-title text-center border border-white">{{plan.name}}</p>
+                        <div class="overflow-auto features-scroll">
+                            <p class="card-texts" *ngFor="let feature of plan.features"><i class="bi bi-check2-circle"></i>{{ feature }}</p>
+                        </div>
+                    </div>
+                    <div class="price-details d-flex flex-column justify-content-center align-items-center">
+                        <p class="price">&#8377; {{plan.price}}</p>
+                        <p class="duration">User/Month</p>
+                        <div class="button w-100">
+                            <button class="w-100">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="standard card d-flex" *ngFor="let plan of standardPlans">
+                    <div class="details d-flex flex-column">
+                        <p class="card-title text-center border border-dark">{{ plan.name }}</p>
+                        <div class="overflow-auto">
+                            <p class="card-texts" *ngFor="let feature of plan.features"><i class="bi bi-check2-circle"></i>{{ feature }}</p>
+                        </div>
+                    </div>
+                    <div class="price-details d-flex flex-column justify-content-center align-items-center">
+                        <p class="price">&#8377; {{ plan.price }}</p>
+                        <p class="duration">User/Month</p>
+                        <div class="button w-100">
+                            <button class="w-100">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="termsAndCondtion text-center mt-4">
+                <p>By placing this order, you agree to the<strong> Terms of Service </strong>and <strong>Privacy Policy.</strong></p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
